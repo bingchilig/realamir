@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>직원 소개 - 명준현 하우스</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      color: #333;
+    }
+
+    .staff-card {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .staff-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-right: 30px;
+      flex-shrink: 0;
+    }
+
+    .staff-info {
+      flex: 1;
+    }
+
+    .staff-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+      color: #2c3e50;
+    }
+
+    .staff-info p {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .home-btn {
+      display: block;
+      width: fit-content;
+      margin: 50px auto 0;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+      background-color: #2980b9;
+    }
+
+    @media screen and (max-width: 768px) {
+      .staff-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .staff-card img {
+        margin: 0 0 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>👨‍💼 아미르협동조합 직원 소개</h1>
+
+  <!-- CEO 아미르 -->
+  <div class="staff-card">
+    <img src="https://i.namu.wiki/i/CWaHc-Wke0NmmA76ZGL98QHICF0CS_PPE811WEw294Z7qML1VUSqXsH0GPdXbsQoDLxBnlEdhGDR6JW-Z4eENQ.webp" alt="CEO 아미르">
+    <div class="staff-info">
+      <h2>CEO 아미르 (조경윤)</h2>
+      <p>
+        아미르는 아미르협동조합의 창립자이자 CEO로,<br>
+        소말리아에서 무료 숙소를 제공하는 혁신적인 시스템을 만들었습니다.<br>
+        <strong>“모든 사람은 머물 곳이 있어야 한다.”</strong>는 철학으로 오늘도 운영 중입니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- 마케팅 허시은 -->
+  <div class="staff-card">
+    <img src="https://via.placeholder.com/180x180?text=허시은" alt="마케팅 허시은">
+    <div class="staff-info">
+      <h2>마케팅 허시은</h2>
+      <p>
+        SNS를 통한 브랜드 홍보와 콘텐츠 제작을 담당하고 있는 마케팅 전문가입니다.<br>
+        허시은은 아미르협동조합를 더 많은 이들에게 알리고, 따뜻한 이미지로 소통을 이끌고 있습니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- 돌아가기 버튼 -->
+  <a href="index.html" class="home-btn">🏠 홈페이지로 돌아가기</a>
+
+</body>
+</html>

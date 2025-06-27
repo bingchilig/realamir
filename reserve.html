@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>예약하기 - 명준현 집</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    label {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    button[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .home-btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📝 예약하기</h2>
+    <form id="reserveForm">
+      <input type="text" id="name" placeholder="이름" required />
+      <input type="password" id="password" placeholder="비밀번호" required />
+      <label>입실일: <input type="date" id="checkin" required /></label>
+      <label>퇴실일: <input type="date" id="checkout" required /></label>
+      <input type="number" id="people" placeholder="인원수 (1명 이상)" min="1" required />
+      <textarea id="request" placeholder="요청사항 (선택)" rows="4"></textarea>
+      <button type="submit">예약 완료</button>
+    </form>
+    <div id="message"></div>
+
+    <a href="index.html" class="home-btn">🏠 홈페이지로 돌아가기</a>
+  </div>
+
+  <script src="script/reserve.js"></script>
+</body>
+</html>

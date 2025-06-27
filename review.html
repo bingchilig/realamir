@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>명준현 하우스 소개 및 오시는 길</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: #000;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 배경 이미지 */
+    body::before {
+      content: "";
+      background: url('house.jpg') no-repeat center center / cover;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.3;
+      z-index: -1;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    /* 컨테이너 공통 */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+      box-sizing: border-box;
+    }
+
+    /* 리뷰 섹션 */
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .review {
+      background: rgba(52, 152, 219, 0.85);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(52, 152, 219, 0.6);
+    }
+
+    .review img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 12px;
+      user-select: none;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .review-name {
+      font-size: 1.2rem;
+      user-select: none;
+    }
+
+    .review-stars {
+      color: #ffcc00;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+
+    .review-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #f0f0f0;
+      user-select: text;
+    }
+
+    /* 100% 현실 보장 */
+    .guarantee {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin: 60px 0 40px;
+      color: #3498db;
+      user-select: none;
+    }
+
+    /* 오시는 길 */
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 0 0 25px;
+      color: #3498db;
+      user-select: none;
+    }
+
+    .intro-section {
+      background: rgba(52, 73, 94, 0.8);
+      border-radius: 12px;
+      padding: 30px 20px 40px;
+      max-width: 600px;
+      margin: 0 auto 80px;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(41, 128, 185, 0.6);
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      word-break: keep-all;
+    }
+
+    .intro-section .note {
+      font-size: 0.9rem;
+      color: #f0dada;
+      margin-top: 0;
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 12px 12px 0 12px;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background-color: #3498db;
+      transition: background-color 0.3s;
+      min-width: 140px;
+      user-select: none;
+      box-shadow: 0 4px 10px rgba(52, 152, 219, 0.5);
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* 모바일 소형 화면 대응 */
+    @media (max-width: 480px) {
+      .review {
+        max-width: 100%;
+      }
+
+      .review img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .review-name {
+        font-size: 1.1rem;
+      }
+
+      .review-text {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 14px 24px;
+        min-width: 120px;
+        margin: 10px 8px 0 8px;
+      }
+
+      .intro-section {
+        max-width: 100%;
+        padding: 20px 15px 30px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .guarantee {
+        font-size: 2.4rem;
+        margin: 50px 0 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 고객 리뷰 섹션 -->
+    <section class="reviews" aria-label="고객 리뷰">
+      <div class="review" tabindex="0">
+        <img src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740" alt="존 크리스 사진" />
+        <div class="review-header">
+          <span class="review-name"> 존 크리스</span>
+          <span class="review-stars" aria-label="별 5개">★★★★★</span>
+        </div>
+        <p class="review-text">
+          명준현 하우스에서의 경험은 정말 잊지 못할 추억이 되었습니다.  
+          따뜻한 환대와 청결한 환경 덕분에 마치 집에 온 듯한 편안함을 느꼈고,  
+          무료 식비 서비스도 충분히 만족스러웠습니다.  
+          안전 문제는 아미르협동조합이 보장하지 않지만,  
+          그 외의 부분에서는 매우 뛰어난 서비스였습니다.
+        </p>
+      </div>
+
+      <div class="review" tabindex="0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpeN-U79zdxCF_HQrGp3aY9FZ1jF8DFTrAkA&s" alt="밥 사진" />
+        <div class="review-header">
+          <span class="review-name">밥 조나단</span>
+          <span class="review-stars" aria-label="별 5개">★★★★★</span>
+        </div>
+        <p class="review-text">
+          여기에서 무료로 숙박하고 식사를 할 수 있다는 점이 정말 놀라웠습니다.  
+          직원들도 친절하고, 편안하게 쉴 수 있었습니다.  
+          특히 동아프리카의 힘든 환경에서 이렇게 지원을 받을 수 있어 큰 도움이 되었습니다.  
+          다만, 맛 보장은 안 된다는 점은 미리 알고 방문하는 것이 좋습니다!
+        </p>
+      </div>
+
+      <div class="review" tabindex="0">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX1B7NkC-WbionBM-iXSBd7l6Fyr83gVG4zg&s" alt="제니퍼 사진" />
+        <div class="review-header">
+          <span class="review-name">루시 제니퍼</span>
+          <span class="review-stars" aria-label="별 5개">★★★★★</span>
+        </div>
+        <p class="review-text">
+          명준현 하우스는 무료 숙박과 식비 제공뿐 아니라,  
+          편안한 쉼터로서 지역사회에 큰 의미가 있습니다.  
+          방문객들 간의 따뜻한 교류도 인상적이었고,  
+          전반적으로 매우 만족스러운 체험이었습니다.  
+          앞으로도 많은 분들이 이곳에서 도움을 받길 바랍니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- 100% 현실 보장 문구 -->
+    <div class="guarantee" aria-label="100% 현실 보장 문구">100% 현실 보장</div>
+
+    <!-- 오시는 길 제목 -->
+    <h2>오시는 길</h2>
+
+    <!-- 소개 및 오시는 길 섹션 -->
+    <section class="intro-section" aria-label="명준현 집 소개 및 오시는 길">
+      <p>
+        동아프리카 아프리카 뿔 지역에 위치한 <strong>소말리아, 명준현 하우스</strong><br /><br />
+        ✅ 무료 숙박<br />
+        ✅ 무료 식비 [맛 보장 불가]<br />
+        ✅ 전 서비스 무료 제공
+      </p>
+      <p class="note"><em>※ 단, 아미르협동조합은 생명안전은 보장드리지 않습니다.</em></p>
+
+      <a href="https://www.google.com/maps/place/Mogadishu" target="_blank" rel="noopener" class="btn">
+        🗺️ 지도 보기
+      </a>
+      <a href="index.html" class="btn">🏠 홈페이지로 돌아가기</a>
+    </section>
+  </div>
+</body>
+</html>
